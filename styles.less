@@ -582,7 +582,11 @@ transition:var(--trans)!important;
 outline-offset: 3px!important;
 outline:1px solid transparent;
 &:focus{
-outline:1px solid var(--accent);}}}
+outline:1px solid var(--tweak-form-block-stroke-color);}}
+::placeholder{
+font-family: var(--inter), var(--body), sans-serif!important;
+font-feature-settings:
+var(--inter-features);}}
 
 /*Replace "reqired" with "*" */
 .form-wrapper .field-list .description.required{
