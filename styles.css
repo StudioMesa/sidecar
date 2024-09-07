@@ -657,14 +657,6 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   position: relative!important;
   width: fit-content !important;
 }
-/*Field Placeholder*/
-.form-item input::placeholder,
-.form-item select,
-.form-item option,
-.form-item textarea::placeholder {
-  font-family: var(--inter), var(--body), sans-serif !important;
-  font-feature-settings: var(--inter-features);
-}
 /*Field Text / Focus Adjustment*/
 .sqs-block-form input,
 .sqs-block-form select,
@@ -686,9 +678,13 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 .sqs-block-form .caption-text:focus {
   outline: 1px solid var(--tweak-form-block-stroke-color);
 }
-.sqs-block-form ::placeholder {
+.sqs-block-form ::placeholder,
+.sqs-block-form select.show-placeholder,
+.sqs-block-form .form-input-prefix {
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
+  color: var(--tweak-form-block-stroke-color) !important;
+  opacity: 1!important;
 }
 /*Replace "reqired" with "*" */
 .form-wrapper .field-list .description.required {
@@ -700,11 +696,15 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 .form-wrapper .field-list .description.required:after {
   visibility: visible;
   position: absolute;
-  top: 10px;
+  top: 4px;
+  opacity: 0.4;
   right: 0;
   content: '*' !important;
-  font-weight: 600!important;
+  font-weight: var(--bold-weight) !important;
   font-size: 12px;
+}
+.form-submit-button {
+  height: 50px!important;
 }
 /*Share Container Animaton*/
 .share-container {
