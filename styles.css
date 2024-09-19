@@ -1,4 +1,4 @@
-/*Sidecar CSS — Updated 09/10/2024*/
+/*Sidecar CSS — Updated 09/18/2024*/
 /*Site Background Color*/
 body {
   background-color: var(--body-background) !important;
@@ -197,9 +197,70 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 }
 /*Mobile Nav Menu Item*/
 .header-menu-nav-item a {
-  font-weight: var(--heading-weight);
-  font-size: 40px!important;
+  font-family: var(--heading);
+  font-size: var(--mobile-nav-size);
+  letter-spacing: -0.015em;
+  margin: 0px;
+  font-weight: var(--mobile-nav-weight) !important;
   letter-spacing: -0.02em;
+}
+/*Mobile Nav Wraper*/
+.header-menu-nav-wrapper {
+  position: static!important;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-nav-gap);
+}
+/*Match main nav to folder*/
+.header-menu-nav-folder-content {
+  display: flex!important;
+  flex-direction: column!important;
+  gap: var(--mobile-nav-gap);
+  padding: var(--sqs-mobile-site-gutter);
+}
+/*Mobile Nav Content*/
+.header-menu-nav-folder-content {
+  position: relative!important;
+  justify-content: center!important;
+}
+/*Mobile Nav Menu Item*/
+.header-menu-nav-item {
+  padding: unset;
+  width: fit-content !important;
+}
+.header-menu-nav-item a {
+  width: fit-content !important;
+}
+/*Add Margin to "Back" Mobile*/
+.header-menu-controls-control--active {
+  margin-bottom: 20px!important;
+}
+/*Mobile Menu Button*/
+.header-menu-cta a {
+  font-weight: var(--mobile-nav-weight) !important;
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
+  font-size: 1rem!important;
+  padding: 14px!important;
+  border: 1px solid var(--menuOverlayButtonBackgroundColor) !important;
+}
+.tweak-global-animations-animation-type-flex .header-menu-cta a:before {
+  border: none!important;
+  border-radius: unset!important;
+}
+/*Mobile Nav Chevron*/
+.chevron {
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  height: 8px!important;
+  width: 8px!important;
+}
+.chevron.chevron--right {
+  margin-left: 4px;
+}
+.chevron.chevron--left {
+  margin-right: 4px;
+  margin-left: -6px;
 }
 /*Core Button Structure*/
 .sqs-block-button-element--small,
@@ -286,7 +347,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   /*List Summary Small*/
 }
 .summary-block-setting-design-list .summary-item {
-  border-bottom: 1px solid var(--tweak-summary-block-stroke-color);
+  border-bottom: 1px solid var(--secondary-color);
   width: 100%!important;
 }
 .summary-block-setting-design-list .sqs-gallery-design-list {
@@ -332,6 +393,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   margin-left: -10px;
   font-family: var(--inter), var(--body), sans-serif !important;
   line-height: 0;
+  font-weight: 400;
   content: "→";
   transition: var(--trans);
 }
@@ -358,7 +420,12 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   text-transform: uppercase;
   text-align: right;
   opacity: 1!important;
-  font-weight: 500;
+  font-weight: var(--bold-weight);
+}
+@media screen and (max-width: 767px) {
+  .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item {
+    font-size: 0.55em !important;
+  }
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--cats,
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item.summary-metadata-item--date,
@@ -371,7 +438,6 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   text-transform: uppercase!important;
   font-style: normal;
   letter-spacing: 0.07em !important;
-  font-size: 8px!important;
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--tags {
   color: var(--dark) !important;
@@ -685,16 +751,24 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   /*Button Link*/
   /*Link Button Styling*/
 }
+.tweak-blog-item-width-narrow .blog-item-wrapper .blog-item-inner-wrapper {
+  margin-top: var(--blog-top);
+}
 @media screen and (min-width: 800px) {
   .tweak-blog-item-width-narrow .blog-item-wrapper .blog-item-inner-wrapper {
     max-width: var(--blog-width) !important;
     width: var(--blog-width) !important;
-    margin-top: var(--blog-top);
   }
 }
-.tweak-blog-item-width-narrow .blog-item-content h1 {
+.tweak-blog-item-width-narrow h1.entry-title {
   padding-bottom: 20px;
-  font-size: 45px!important;
+  font-size: 45px;
+}
+@media screen and (max-width: 800px) {
+  .tweak-blog-item-width-narrow h1.entry-title {
+    font-size: 1.9rem !important;
+    padding-bottom: 0px!important;
+  }
 }
 .tweak-blog-item-width-narrow .blog-item-content h2 {
   margin-top: 3rem!important;
@@ -729,6 +803,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   max-width: var(--blog-width);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 .tweak-blog-item-width-narrow .blog-meta-item a {
   font-feature-settings: var(--inter-features) !important;
@@ -777,11 +852,11 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   padding: 25px 40px;
   overflow: hidden!important;
   border-radius: 10px!important;
-  background: var(--light-bold);
+  background: var(--secondary-color);
 }
 @media screen and (max-width: 767px) {
   .tweak-blog-item-width-narrow blockquote {
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
 }
 .tweak-blog-item-width-narrow blockquote .sqsrte-small {
@@ -793,7 +868,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   text-transform: uppercase;
   letter-spacing: 0.07em;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 700!important;
   margin-left: unset!important;
   margin-right: unset!important;
 }
@@ -820,6 +895,11 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   margin-right: auto;
   margin-bottom: 50px;
   margin-top: 0px;
+}
+@media screen and (max-width: 800px) {
+  .tweak-blog-item-width-narrow .share-container {
+    margin-bottom: 20px;
+  }
 }
 .tweak-blog-item-width-narrow .blog-item-author-profile-wrapper a {
   display: flex!important;
