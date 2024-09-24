@@ -347,6 +347,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   /*List Summary Small*/
 }
 .summary-block-setting-design-list .summary-item {
+  padding: 6px 0px!important;
   border-bottom: 1px solid var(--secondary-color);
   width: 100%!important;
 }
@@ -377,6 +378,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a {
   width: 100%!important;
+  line-height: inherit!important;
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   font-weight: var(--body-weight) !important;
