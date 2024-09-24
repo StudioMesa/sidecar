@@ -334,10 +334,14 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   width: fit-content !important;
   margin-left: auto!important;
 }
+/*Super remove bottom margin*/
+body .sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
+  margin-bottom: unset!important;
+}
 /*Summary Block*/
 .sqs-block-summary-v2 .summary-block-setting-design-list {
-  -webkit-animation: 0.7s ease 0s normal forwards 1 flexload !important;
-  animation: 0.7s ease 0s normal forwards 1 flexload !important;
+  -webkit-animation: 0.8s ease 0s normal forwards 1 flexload !important;
+  animation: 0.8s ease 0s normal forwards 1 flexload !important;
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   max-width: var(--blog-width) !important;
