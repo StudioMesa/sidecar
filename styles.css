@@ -347,6 +347,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   /*List Summary Small*/
 }
 .summary-block-setting-design-list .summary-item {
+  padding: unset!important;
   border-bottom: 1px solid var(--secondary-color);
   width: 100%!important;
 }
