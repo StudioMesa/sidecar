@@ -377,13 +377,11 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a {
   width: 100%!important;
-  display: flex;
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   font-weight: var(--body-weight) !important;
   align-items: center;
-  margin-bottom: 0;
-  height: 60px;
+  margin-bottom: 0!important;
   transition: var(--trans) !important;
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a:before {
