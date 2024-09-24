@@ -329,15 +329,13 @@ width:100%!important;}
 /*List Summary Small*/
 .sqs-gallery-design-list{  
 width:100%!important;
-/*Summary Item - Remove Margin*/
-.summary-item, .summary-title{
-padding-bottom:0!important;
-margin-bottom:0!important;}
 
 /*Summary Title*/
 .summary-title{
-width:100%!important;
-text-align:left!important;}
+width:fit-content!important;
+text-align:left!important;
+padding-bottom:0!important;
+margin-bottom:0!important;}
   
 /*Summary Title Link*/
 .summary-title a{
@@ -368,8 +366,7 @@ max-width:30%!important;
 @media screen and (max-width:767px){
 width:35%!important;}
 display:block!important;
-padding:12px 0;
-cursor:pointer;
+padding:unset!important;
 text-align:right!important;
 line-height:.5!important;
 margin-bottom:0px!important;}
@@ -420,7 +417,7 @@ align-items:center;}
 
 /*Summary Container HOVER*/
 @media screen and (min-width:767px){
-.sqs-gallery-meta-container:hover{
+.summary-title:hover{
 /*Title*/
 .summary-title a{
 padding-left:18px;}
