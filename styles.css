@@ -449,17 +449,18 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   display: flex;
   float: unset!important;
   flex-direction: row!important;
+  justify-content: space-between;
   align-items: center;
 }
 @media screen and (min-width: 767px) {
-  .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover {
+  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover {
     /*Title*/
     /*Arrow*/
   }
-  .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover .summary-title a {
+  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover .summary-title a {
     padding-left: 18px;
   }
-  .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover .summary-title a:before {
+  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover .summary-title a:before {
     opacity: 1!important;
     margin-left: -18px;
     transition: opacity 0.3s ease;
