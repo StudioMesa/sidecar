@@ -354,7 +354,6 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 }
 .summary-block-setting-design-list .sqs-gallery-design-list {
   width: 100%!important;
-  /*Summary Item - Remove Margin*/
   /*Summary Title*/
   /*Summary Title Link*/
   /*Summary Title Arrow*/
@@ -368,14 +367,11 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   /*Summary Text*/
   /*Summary Container HOVER*/
 }
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-item,
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
+  width: fit-content !important;
+  text-align: left!important;
   padding-bottom: 0!important;
   margin-bottom: 0!important;
-}
-.summary-block-setting-design-list .sqs-gallery-design-list .summary-title {
-  width: 100%!important;
-  text-align: left!important;
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a {
   width: 100%!important;
@@ -400,8 +396,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   min-width: 30%!important;
   max-width: 30%!important;
   display: block!important;
-  padding: 12px 0;
-  cursor: pointer;
+  padding: unset!important;
   text-align: right!important;
   line-height: 0.5 !important;
   margin-bottom: 0px!important;
@@ -457,14 +452,14 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   align-items: center;
 }
 @media screen and (min-width: 767px) {
-  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover {
+  .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover {
     /*Title*/
     /*Arrow*/
   }
-  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover .summary-title a {
+  .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover .summary-title a {
     padding-left: 18px;
   }
-  .summary-block-setting-design-list .sqs-gallery-design-list .sqs-gallery-meta-container:hover .summary-title a:before {
+  .summary-block-setting-design-list .sqs-gallery-design-list .summary-title:hover .summary-title a:before {
     opacity: 1!important;
     margin-left: -18px;
     transition: opacity 0.3s ease;
