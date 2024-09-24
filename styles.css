@@ -336,8 +336,8 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 }
 /*Summary Block*/
 .summary-block-setting-design-list {
-  -webkit-animation: 0.4s ease 0s normal forwards 1 flexload !important;
-  animation: 0.4s ease 0s normal forwards 1 flexload !important;
+  -webkit-animation: 0.7s ease 0s normal forwards 1 flexload !important;
+  animation: 0.7s ease 0s normal forwards 1 flexload !important;
   font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   max-width: var(--blog-width) !important;
