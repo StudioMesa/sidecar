@@ -164,6 +164,21 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   text-decoration: underline!important;
   text-underline-offset: 3px;
 }
+/*Folder Icon Transition*/
+.header-nav-item--folder .header-dropdown-flip svg,
+.header-nav-item--folder:hover .header-dropdown-flip svg,
+.header-nav .header-nav-item--folder a.header-nav-folder-title[aria-expanded='true'] .header-dropdown-flip svg {
+  transition: ease 0.25s all !important;
+}
+/*Folder Content Transition*/
+.header-nav-item--folder .header-nav-folder-content {
+  display: block!important;
+  opacity: 0!important;
+  transition: ease 0.25s all;
+}
+.header-nav-item--folder:hover .header-nav-folder-content {
+  opacity: 1!important;
+}
 /*Mobile Nav Menu Item*/
 .header-menu-nav-item a {
   font-family: var(--heading);
