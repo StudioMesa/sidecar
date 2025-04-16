@@ -159,11 +159,6 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   text-decoration: none!important;
   background: none!important;
 }
-/*Add underline to nav hover*/
-.header-nav-item--collection:hover {
-  text-decoration: underline!important;
-  text-underline-offset: 3px;
-}
 /*Folder Icon Transition*/
 .header-nav-item--folder .header-dropdown-flip svg,
 .header-nav-item--folder:hover .header-dropdown-flip svg,
