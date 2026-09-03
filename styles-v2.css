@@ -503,7 +503,7 @@ body section[data-current-context*='"typeName": "blog-single-column"'] .blog-sin
 body section[data-current-context*='"typeName": "blog-single-column"'] .blog-single-column.collection-content-wrapper .blog-single-column--container.blog-item {
   margin-bottom: unset!important;
   padding: 18px 0px!important;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   width: 100%!important;
   opacity: 1!important;
   transform: unset!important;
