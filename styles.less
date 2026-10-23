@@ -43,7 +43,8 @@ font-weight:var(--heading-weight)!important;}
 display:none!important;}
 
 /*Hide Blog List*/
-section[data-current-context*='"typeName": "blog-single-column"'] .blog-single-column.collection-content-wrapper{
+section[data-current-context*='"typeName": "blog-single-column"'] .blog-single-column.collection-content-wrapper,
+section[data-definition-name="website.components.blogList"] .blog-single-column.collection-content-wrapper{
 display:none!important;}
 
 
@@ -449,7 +450,8 @@ transition:opacity .3s ease;}}}}}
 
 
 //---Small Blog List V2---//
-body section[data-current-context*='"typeName": "blog-single-column"'] .blog-single-column.collection-content-wrapper{
+body section[data-current-context*='"typeName": "blog-single-column"'] .blog-single-column.collection-content-wrapper,
+body section[data-definition-name="website.components.blogList"] .blog-single-column.collection-content-wrapper{
   
 /*Text Row*/
 .blog-single-column--text{
