@@ -596,6 +596,15 @@ body section[data-definition-name="website.components.blogList"] .blog-single-co
     transition: opacity 0.3s ease;
   }
 }
+/*Read More: hide when switched off (the component ignores the Site Styles setting and the "false" value)*/
+body.tweak-blog-single-column-read-more-style-hide section[data-definition-name="website.components.blogList"] .blog-single-column .blog-more-link,
+section[data-definition-name="website.components.blogList"] .blog-single-column[data-read-more="false"] .blog-more-link {
+  display: none!important;
+}
+/*Read More: single underline, like the legacy blog list*/
+section[data-definition-name="website.components.blogList"] .blog-single-column .blog-more-link::after {
+  display: none!important;
+}
 /*Newsletter Form*/
 .newsletter-form {
   display: flex!important;
