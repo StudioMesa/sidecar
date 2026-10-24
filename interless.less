@@ -916,3 +916,21 @@ margin:var(--sqs-site-gutter) auto!important;}
 padding-left: var(--sqs-mobile-site-gutter)!important;
 padding-right: var(--sqs-mobile-site-gutter)!important;
 margin:var(--sqs-mobile-site-gutter) auto!important;}}
+
+
+//---NEW SQUARESPACE COMPONENTS---//
+/*Summary list arrow: align with the link's first line at any title size*/
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a{
+position:relative;}
+.sqs-block-summary-v2 .summary-block-setting-design-list .sqs-gallery-design-list .summary-title a:before{
+top:0;
+line-height:normal!important;}
+
+/*Blog post (blogItem component): its spacing outranks the Blog Post rules, so restore them*/
+.tweak-blog-item-width-narrow .cdk-section[data-definition-name="website.components.blogItem"]{
+.blog-item-wrapper .blog-item-inner-wrapper{
+margin-top:var(--blog-top);}
+.blog-item-wrapper .blog-item-top-wrapper{
+margin-bottom:20px;}
+.blog-item-wrapper .author-name{
+display:flex;}}
